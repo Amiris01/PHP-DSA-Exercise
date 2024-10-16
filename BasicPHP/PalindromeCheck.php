@@ -1,5 +1,6 @@
 <?php 
 
+//O(n) time
 function palindromeCheck($string){
     $string = strtolower(str_replace(' ', '', $string));
     $data = "";
@@ -10,12 +11,5 @@ function palindromeCheck($string){
 
     return $string === $data;
 }
-
-// $string = 'civic';
-// if(palindromeCheck($string)){
-//     echo $string.' is palindrome';
-// }else{
-//     echo $string.' is not palindrome';
-// }
 
 ?>

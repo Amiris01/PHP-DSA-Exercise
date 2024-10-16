@@ -1,5 +1,6 @@
 <?php
 
+//O(n²) time
 function bubbleSortAscnd(array $data){
     $n = count($data);
 
@@ -23,6 +24,7 @@ function bubbleSortAscnd(array $data){
     return $data;
 }
 
+//O(n²) time
 function bubbleSortDscnd(array $data){
     $n = count($data);
 
@@ -45,16 +47,5 @@ function bubbleSortDscnd(array $data){
 
     return $data;
 }
-
-// $array = [9, 6, 5, 3, 2, 8];
-// $sortedArray = bubbleSortAscnd($array);
-// foreach($sortedArray as $element){
-//     echo $element . ' ';
-// }
-// echo '<br>';
-// $sortedArray = bubbleSortDscnd($array);
-// foreach($sortedArray as $element){
-//     echo $element . ' ';
-// }
 
 ?>
