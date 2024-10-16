@@ -1,0 +1,17 @@
+{
+    "name": "amir/exercise",
+    "require": {
+        "phpunit/phpunit": "^8.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Amir\\Exercise\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Amir Iskandar",
+            "email": "amir.iskandar@stampedesolution.com"
+        }
+    ]
+}
