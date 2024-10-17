@@ -1,6 +1,7 @@
 <?php 
 
-function arrIntersect(array $data, array $data2){
+//O(n * m * k) time
+function arrIntersects(array $data, array $data2){
     $dataLength = count($data);
     $data2Length = count($data2);
     $intersectVal = [];
@@ -22,16 +23,22 @@ function arrIntersect(array $data, array $data2){
     }
 }
 
-// $array = [1,2,3,4,5,5,3,1,1];
-// $array2 = [1,1,1,1,1,2,3];
-// $checkIntersect = arrIntersect($array, $array2);
+//O(n + m) time
+function arrIntersect(array $arr1, array $arr2) {
+    $set = [];
+    foreach ($arr1 as $value) {
+        $set[$value] = true;
+    }
 
-// if($checkIntersect){
-//     foreach($checkIntersect as $element){
-//         echo $element.' ';
-//     }
-// }else{
-//     echo 'No intersection for this array';
-// }
+    $intersection = [];
+    foreach ($arr2 as $value) {
+        if (isset($set[$value])) {
+            $intersection[] = $value;
+            unset($set[$value]);
+        }
+    }
+
+    return $intersection ? :false;
+}
 
 ?>

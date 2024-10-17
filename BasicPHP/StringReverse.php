@@ -1,4 +1,6 @@
 <?php
+
+//O(n^2) time
 function reverseString(string $data){
     $string = "";
     for($i = strlen($data) - 1; $i >= 0; $i--){
@@ -7,7 +9,15 @@ function reverseString(string $data){
     return $string;
 }
 
+//O(n) time
+function reverseStringOpt(string $data) {
+    $reversedArray = [];
+    
+    for ($i = strlen($data) - 1; $i >= 0; $i--) {
+        $reversedArray[] = $data[$i];
+    }
+    
+    return implode('', $reversedArray);
+}
 
-// $string = reverseString('Hello world');
-// echo $string;
 ?>

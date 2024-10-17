@@ -1,5 +1,6 @@
 <?php
 
+//O(√n) time
 function PrimeNumCheck($number){
     //1 and negative number not prime
     if ($number <= 1) {
@@ -25,12 +26,5 @@ function PrimeNumCheck($number){
 
     return true;
 }
-
-// $num = 199;
-// if(PrimeNumCheck($num)){
-//     echo $num.' is prime number.';
-// }else{
-//     echo $num.' is not prime number.';
-// }
 
 ?>

@@ -1,6 +1,7 @@
 <?php
 
-function findDuplicate(array $data){
+//O(n²) time
+function findDuplicates(array $data){
     $n = count($data);
     $duplicateVal = [];
 
@@ -21,15 +22,22 @@ function findDuplicate(array $data){
     }
 }
 
-// $array = [1,2,3,4,5,5,3,1,1];
-// $checkDup = findDuplicate($array);
+// O(n) time
+function findDuplicate(array $arr) {
+    $elementCount = [];
+    $duplicates = [];
+    foreach ($arr as $value) {
+        if (isset($elementCount[$value])) {
+            if ($elementCount[$value] === 1) {
+                $duplicates[] = $value;
+            }
+            $elementCount[$value]++;
+        } else {
+            $elementCount[$value] = 1;
+        }
+    }
 
-// if($checkDup){
-//     foreach($checkDup as $element){
-//         echo $element.' ';
-//     }
-// }else{
-//     echo 'No duplicate for this array';
-// }
+    return $duplicates ? : false;
+}
 
 ?>

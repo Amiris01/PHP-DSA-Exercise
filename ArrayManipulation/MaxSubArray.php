@@ -1,5 +1,6 @@
 <?php
 
+//O(n + k) time
 function KadaneAlgo(array $data){
     if(empty($data)){
         throw new InvalidArgumentException('Input array cannot be empty.');
@@ -27,10 +28,8 @@ function KadaneAlgo(array $data){
         }
     }
     
+    //res is the max sub array sum
     return array_slice($data, $start, $end - $start + 1);
 }
 
-// $array = [2,3,-8,7,-1,2,3];
-// $maxSubArr = KadaneAlgo($array);
-// echo "Maximum Subarray: [" . implode(", ", $maxSubArr) . "]";
 ?>
